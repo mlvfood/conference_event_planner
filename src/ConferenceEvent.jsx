@@ -11,7 +11,7 @@ const ConferenceEvent = () => {
     const [numberOfPeople, setNumberOfPeople] = useState(1);
     const venueItems = useSelector((state) => state.venue);
     const avItems = useSelector((state)=> state.av);
-    const mealItems = useSelector((state)=> state.meals);
+    const mealsItems = useSelector((state)=> state.meals);
     const dispatch = useDispatch();
     const remainingAuditoriumQuantity = 3 - venueItems.find(item => item.name === "Auditorium Hall (Capacity:200)").quantity;
 
@@ -134,7 +134,7 @@ const ConferenceEvent = () => {
             });
         }
         else if (section === "meals"){
-            mealItems.forEach((item)=> {
+            mealsItems.forEach((item)=> {
                 if(item.selected){
                     totalCost+= item.cost * numberOfPeople;
                 }
@@ -318,9 +318,13 @@ const ConferenceEvent = () => {
                             </div>
                         </div>
                     ) : (
-                        <div className="total_amount_detail">
-                            <TotalCost totalCosts={totalCosts} handleClick={handleToggleItems} ItemsDisplay={() => <ItemsDisplay items={items} />} />
+                        //<div className="total_amount_detail">
+                          //  <TotalCost totalCosts={totalCosts} handleClick={handleToggleItems} ItemsDisplay={() => <ItemsDisplay items={items} />} />
+                        //</div>
+                        <div className = "total_amount_detail">
+                           <TotalCost totalCosts={ totalCosts} ItemsDisplay = {() => <ItemsDisplay items = {items}/>}/>
                         </div>
+
                     )
                 }
 
