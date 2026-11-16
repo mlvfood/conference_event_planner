@@ -4,8 +4,8 @@ export const avSlice = createSlice({
   name: "av",
   initialState: [
     	{
-		//img: "https://pixabay.com/images/download/business-20031_640.jpg",
-		img: "https://media.wired.com/photos/629feede5da297afa9ff5e6f/3:2/w_2560%2Cc_limit/Home-Theater-Gear-GettyImages-95781853.jpg",
+		img: "https://pixabay.com/images/download/business-20031_640.jpg",
+		//img: "https://media.wired.com/photos/629feede5da297afa9ff5e6f/3:2/w_2560%2Cc_limit/Home-Theater-Gear-GettyImages-95781853.jpg",
         name: "Projectors",
 		cost: 200,
 		quantity: 0,
