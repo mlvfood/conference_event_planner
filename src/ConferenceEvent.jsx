@@ -157,7 +157,7 @@ const ConferenceEvent = () => {
         av: avTotalCost,
         meals: mealsTotalCost,
     };
-    
+
     return (
         <>
             <navbar className="navbar_event_conference">
